@@ -1,0 +1,16 @@
+Code must do the following:
+	Determine whether the patient is eating or fasting.
+	Look at current blood sugar level
+	If the patient is hyperglycemic, begin the timer.
+	If the patient returns to normal, reset the timer.
+	If the patient is hypoglycemic, begin the timer.
+	If the patient returns to normal, reset the timer.
+	If the patient jumps from hypoglycemic to hyperglycemic or vice versa, alert authorities.
+	If the timer goes past a set value, alert authorities.
+
+Proposed functions:
+	setThreshold: Sets threshold (acceptable distance from norm). This defaults to 5.
+	setHealthyRange: Sets healthy values depending on patient's eating, fasting status.
+	checkBloodSugar: Checks current blood sugar and classifies it as hypo, healthy, or hyper.
+	compareBloodSugars: If high-high or low-low, add to timer. If healthy, stop timer. If 						low-high or high-low, jump to emergency.
+	emergency: If timer exceeds time limit (ex. 1 hr) or blood sugar is spiking, 						alert authorities.

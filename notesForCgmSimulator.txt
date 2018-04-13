@@ -13,4 +13,14 @@ Proposed functions:
 	setHealthyRange: Sets healthy values depending on patient's eating, fasting status.
 	checkBloodSugar: Checks current blood sugar and classifies it as hypo, healthy, or hyper.
 	compareBloodSugars: If high-high or low-low, add to timer. If healthy, stop timer. If 						low-high or high-low, jump to emergency.
-	emergency: If timer exceeds time limit (ex. 1 hr) or blood sugar is spiking, 						alert authorities.
+	emergency: If timer exceeds time limit (ex. 1 hr) or blood sugar is spiking, alert authorities.
+
+Written functions:
+	setThreshold
+	setHealthyRange(eating)
+	checkBloodSugar(currentBloodSugar)
+	emergency(state)
+
+Tested functions:
+
+Functions that need editing:

@@ -21,6 +21,10 @@ Written functions:
 	checkBloodSugar(currentBloodSugar)
 	emergency(state)
 
+Functions that need written:
+	compareBloodSugars
+	Simulation
+
 Tested functions:
 
 Functions that need editing:

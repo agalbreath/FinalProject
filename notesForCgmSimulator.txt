@@ -21,14 +21,23 @@ Written functions:
 	checkBloodSugar(currentBloodSugar)
 	emergency(state)
 	compareBloodSugars(currentBloodSugar, pastBloodSugar)
-	Simulation
+	simulation
 
 Functions that need written:
-	
+
 Tested functions:
 	setThreshold
 	setHealthyRange(eating)
 	checkBloodSugar(currentBloodSugar)
+	emergency
+	simulation
 
-Functions that need editing:
-	compareBloodSugars(currentBloodSugar, pastBloodSugar): Currently creating an error whenever timer or healthy timer is referenced. Would it be easier to put both files together?
+Functions that require editing:
+	checkBloodSugar(currentBloodSugar, pastBloodSugar)
+
+Current Issues:
+	When blood sugar levels oscillate between healthy and non-healthy, timer values seem to be thrown off. To examine potential causes, I am adding print statements to
+	compareBloodSugars to see timer values.
+		Update: Statements are printed for the first timer value. If values are hypoglycemic, timer values only change or are printed for hypoglycemic values. labile
+		glucose values are still accounted for. Issue is likely in checkBloodSugar.
+		Update 2: Labile glucose value only accounted for if done initially. Issue is definitely in checkBloodSugar

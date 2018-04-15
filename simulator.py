@@ -2,6 +2,9 @@ import cgmSimulator
 
 cgmSimulator.setThreshold(5)
 cgmSimulator.running = True
+cgmSimulator.healthyTimer = 0
+cgmSimulator.hyperTimer = 0
+cgmSimulator.hypoTimer = 0
 print ("Welcome to CGM Simulator!")
 print ("This simulator is used to demonstrate the functionality of Bluetooth-enabled Constant Glucose Monitors to automatically alert emergency contacts in case of emergency.")
 print ("During this simulator, you will be asked to input your blood sugar periodically.")
@@ -27,4 +30,4 @@ else:
 while cgmSimulator.running == True:
     cgmSimulator.currentBloodSugar = int(input("Please enter your current blood sugar: "))
     cgmSimulator.checkBloodSugar(cgmSimulator.currentBloodSugar)
-    cgmSimulator.compareBloodSugars(cgmSimulator.currentBloodSugar, cgmSimulator.pastBloodSugar)
+    cgmSimulator.compareBloodSugars(cgmSimulator.currentBloodSugar)

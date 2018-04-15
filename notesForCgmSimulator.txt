@@ -20,11 +20,11 @@ Written functions:
 	setHealthyRange(eating)
 	checkBloodSugar(currentBloodSugar)
 	emergency(state)
-
-Functions that need written:
-	compareBloodSugars
+	compareBloodSugars(currentBloodSugar, pastBloodSugar)
 	Simulation
 
+Functions that need written:
+	
 Tested functions:
 
 Functions that need editing:

@@ -26,5 +26,9 @@ Written functions:
 Functions that need written:
 	
 Tested functions:
+	setThreshold
+	setHealthyRange(eating)
+	checkBloodSugar(currentBloodSugar)
 
 Functions that need editing:
+	compareBloodSugars(currentBloodSugar, pastBloodSugar): Currently creating an error whenever timer or healthy timer is referenced. Would it be easier to put both files together?

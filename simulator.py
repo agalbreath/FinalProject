@@ -1,6 +1,7 @@
 import cgmSimulator
 
-running = True
+cgmSimulator.init()
+cgmSimulator.running = True
 print ("Welcome to CGM Simulator!")
 print ("This simulator is used to demonstrate the functionality of Bluetooth-enabled Constant Glucose Monitors to automatically alert emergency contacts in case of emergency.")
 print ("During this simulator, you will be asked to input your blood sugar periodically.")
@@ -19,8 +20,11 @@ elif eating == 'no' or eating == 'No' or eating == 'NO':
     currentBloodSugar = 105
     pastBloodSugar = 150
     print ("Maximum healthy blood sugar is 130 mg/dL. Current blood sugar is 105 mg/dL.")
-cgmSimulator.timer = 0
-while running == True:
+else:
+    print ('Well how is that possible? Is something wrong?')
+    print ('Error. Simulation ending.')
+    cgmSimulator.running = False
+while cgmSimulator.running == True:
     cgmSimulator.currentBloodSugar = input("Please enter your current blood sugar: ")
     cgmSimulator.checkBloodSugar(currentBloodSugar)
     cgmSimulator.compareBloodSugars(currentBloodSugar, pastBloodSugar)
